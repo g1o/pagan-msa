@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
         Log_output::write_out("\nThe analysis started: " +string( asctime( localtime( &s_time ) ) )+"\n",0);
     }
 
-    srand(time(0));
+    srand(time(NULL) ^ getpid());
     clock_t analysis_start_time=clock();
 
 
